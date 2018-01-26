@@ -6,13 +6,6 @@ public class Daycycle : MonoBehaviour {
 
     [Tooltip ("Number of minutes per second that pass")]
     public float minutesPerSecond;
-
-    private Quaternion startRotation;
-
-	// Use this for initialization
-	void Start () {
-        startRotation = transform.rotation;
-	}
 	
 	// Update is called once per frame
 	void Update () { 

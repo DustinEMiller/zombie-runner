@@ -15,8 +15,8 @@ public class ClearArea : MonoBehaviour {
 	void Update () {
         timeSinceLastTrigger += Time.deltaTime;
 
-        if (timeSinceLastTrigger > 1f) {
-            Debug.Log("Found clear area");
+        if (timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f) {
+            SendMessageUpwards("OnFindClearArea");
         }
 
     }
