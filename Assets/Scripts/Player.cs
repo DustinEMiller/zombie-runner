@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Transform playerSpawnsPoints;
+    public GameObject landingAreaPrefab;
 
     private bool respawn;
     private Transform[] spawnPoints;
@@ -31,10 +32,10 @@ public class Player : MonoBehaviour {
     }
 
     void OnFindClearArea() {
-        Invoke("SropFlare", 3f);
+        Invoke("DropFlare", 3f);
     }
 
     void DropFlare () {
-        //Drop a flare;
+        Instantiate(landingAreaPrefab, transform.position, transform.rotation);
     }
 }
